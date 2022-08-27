@@ -17,7 +17,7 @@ chip$ReleaseYear <- as.numeric(chip$ReleaseYear)
 
 # Plot
 chipPlot <- ggplot(chip, aes(ReleaseYear, log(`Transistors (million)`), colour=Vendor))+
-  geom_point(data= ~subset(., select=-c(Vendor)), colour="grey85")+
+  geom_point(data= ~subset(., select=-c(Vendor, Type)), colour="grey85")+
   geom_point(alpha=0.6)+
   geom_smooth(se=FALSE, span=1.5)+
   facet_grid(Vendor~Type)+
@@ -31,10 +31,10 @@ chipPlot <- ggplot(chip, aes(ReleaseYear, log(`Transistors (million)`), colour=V
   theme(panel.grid.minor = element_blank(),
         legend.position = "none",
         axis.title = element_text(face="bold", size=12),
-        strip.text = element_text(size=9), #face="bold", 
+        strip.text = element_text(size=9), 
         strip.background = element_blank(),
         plot.background = element_rect(fill="grey95"),
         plot.title = element_text(size=18),
         plot.subtitle = element_text(size=10))
 
-ggsave("TT-ChipPlot-Aug23-2022.png", width=5.83, height=8.27, units="in")
+ggsave("TT-ChipPlot-Aug23-2022.png", width=5.8, height=8.0, units="in")
