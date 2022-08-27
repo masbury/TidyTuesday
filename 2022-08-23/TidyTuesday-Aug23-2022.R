@@ -24,7 +24,7 @@ chipPlot <- ggplot(chip, aes(ReleaseYear, log(`Transistors (million)`), colour=V
   labs(x="Year",
        y="Number of Transistors \n(log million)",
        title="Moore's Law", 
-       subtitle="Moore's law states that the number of transistors within an integrated circuit \ndoubles approximately every 2 years. The number of transitors (in millions on \na log scale) over time are shown below by processor type and vendor.", 
+       subtitle="Moore's law states that the number of transistors within an integrated circuit \ndoubles approximately every 2 years. The number of transitors (in millions on \na log scale) over time are shown below by processor type and vendor. Colours \ncorrespond to the individual vendors.", 
        caption="Data from the CHIP dataset")+
   scale_colour_manual(values=c("#4ba6c9", "#5b8fc6", "#7b75b4", "#935891", "#9b3e63"))+
   theme_bw()+
@@ -37,4 +37,4 @@ chipPlot <- ggplot(chip, aes(ReleaseYear, log(`Transistors (million)`), colour=V
         plot.title = element_text(size=18),
         plot.subtitle = element_text(size=10))
 
-ggsave("TT-ChipPlot-Aug23-2022.png", width=5.8, height=8.0, units="in")
+ggsave("TT-ChipPlot-Aug23-2022.png", width=5.8, height=7.4, units="in")
