@@ -37,4 +37,4 @@ chipPlot <- ggplot(chip, aes(ReleaseYear, log(`Transistors (million)`), colour=V
         plot.title = element_text(size=18),
         plot.subtitle = element_text(size=10))
 
-ggsave("TT-ChipPlot-Aug23-2022.png", width=5.8, height=7.4, units="in")
+ggsave("TT-Plot-Aug23-2022.png", width=5.8, height=7.4, units="in")
